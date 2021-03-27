@@ -1,0 +1,42 @@
+def pedirNumeroEntero():
+ 
+    correcto=False
+    num=0
+    while(not correcto):
+        try:
+            num = int(input("Introduce una opcion: "))
+            correcto=True
+        except ValueError:
+            print('Error, al introducir una opcion')
+     
+    return num
+ 
+salir = False
+opcion = 0
+ 
+while not salir:
+ 
+    print ("1. Crear un contacto en la agenda")
+    print ("2. Listado de contactos")
+    print ("3. Buscar ingresando el nombre de la person")
+    print ("4. Modificacion de su telefono, mail o direccion")
+    print ("5. Salir")
+     
+    print ("Elige una opcion")
+ 
+    opcion = pedirNumeroEntero()
+ 
+    if opcion == 1:
+        print ("Opcion 1")
+    elif opcion == 2:
+        print ("Opcion 2")
+    elif opcion == 3:
+        print("Opcion 3")
+    elif opcion == 4:
+        print("Opcion 4")
+    elif opcion == 5:
+        salir = True
+    else:
+        print ("Introduce un numero entre 1 y 4")
+ 
+print ("Fin")
